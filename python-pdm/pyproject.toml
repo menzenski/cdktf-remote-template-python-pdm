@@ -1,8 +1,7 @@
-[tool.poetry]
+[project]
 name = "cdktf-python-pdm"
 version = "1.0.0"
 description = ""
-authors = []
 dependencies = [
     "cdktf>=0.12.2",
 ]
