@@ -29,7 +29,7 @@ exports.post = options => {
     throw new Error(`missing context "pypi_cdktf"`);
   }
 
-  execSync('pdm install', { stdio: 'inherit' });
+  execSync('pdm install -v', { stdio: 'inherit' });
   execSync(`pdm add ${pypi_cdktf}`, { stdio: 'inherit' });
   chmodSync('main.py', '700');
 
