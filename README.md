@@ -18,5 +18,5 @@ cdktf init --template="https://github.com/menzenski/cdktf-remote-template-python
 Or a tag:
 
 ```bash
-cdktf init --template="https://github.com/menzenski/cdktf-remote-template-python-pdm/archive/refs/tags/1.0.0.zip" --local
+cdktf init --template="https://github.com/menzenski/cdktf-remote-template-python-pdm/archive/refs/tags/1.0.1.zip" --local
 ```
