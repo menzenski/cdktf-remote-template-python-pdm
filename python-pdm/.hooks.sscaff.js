@@ -6,13 +6,13 @@ const os = require('os');
 exports.pre = () => {
   try {
     if (os.platform() === 'win32') {
-      execSync('where poetry')
+      execSync('where pdm')
     }
     else {
-      execSync('which poetry')
+      execSync('which pdm')
     }
   } catch {
-    console.error(`Unable to find "poetry". Install from https://python-poetry.org/docs/#installation`)
+    console.error(`Unable to find "pdm". Install from https://pdm.fming.dev/latest/#installation`)
     process.exit(1);
   }
 };
@@ -29,8 +29,8 @@ exports.post = options => {
     throw new Error(`missing context "pypi_cdktf"`);
   }
 
-  execSync('poetry install', { stdio: 'inherit' });
-  execSync(`poetry add ${pypi_cdktf}`, { stdio: 'inherit' });
+  execSync('pdm install', { stdio: 'inherit' });
+  execSync(`pdm add ${pypi_cdktf}`, { stdio: 'inherit' });
   chmodSync('main.py', '700');
 
   console.log(readFileSync('./help', 'utf-8'));

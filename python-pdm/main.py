@@ -11,6 +11,6 @@ class MyStack(TerraformStack):
 
 
 app = App()
-MyStack(app, "cdktf-python-poetry")
+MyStack(app, "cdktf-python-pdm")
 
 app.synth()
