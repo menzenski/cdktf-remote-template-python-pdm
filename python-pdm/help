@@ -5,7 +5,7 @@
   cat help                Prints this message
 
   Compile:
-    poetry run ./main.py  Compile and run the python code.
+    pdm run python ./main.py  Compile and run the python code.
 
   Synthesize:
     cdktf synth [stack]   Synthesize Terraform resources to cdktf.out/

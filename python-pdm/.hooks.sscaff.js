@@ -1,6 +1,5 @@
 const { execSync } = require('child_process');
-const { chmodSync } = require('fs');
-const { readFileSync, writeFileSync } = require('fs');
+const { readFileSync, writeFileSync, chmodSync, } = require('fs');
 const os = require('os');
 
 exports.pre = () => {
